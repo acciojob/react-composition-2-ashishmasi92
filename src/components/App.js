@@ -5,15 +5,10 @@ import Open from "./Open";
 const App = () => {
 let [isOpen,setIsOpen] = useState(false)
 
-function handleOverlayClick(e) {
-    // Only close modal if the overlay itself is clicked, not the modal content
-    if (e.target === e.currnetTarget) {
-      isClose();
-    }
-  }
+
 
   return (
-    <div  className="model-overlay" >
+    <div>
        
 <button onClick={()=>{
   setIsOpen(true)
