@@ -1,11 +1,22 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
-
+import Open from "./Open";
 const App = () => {
+let [isOpen,setIsOpen] = useState(false)
+
+
   return (
     <div>
-        {/* Do not remove the main div */}
+       
+<button onClick={()=>{
+  setIsOpen(true)
+}}>Show Model</button>
+
+<Open 
+flag ={isOpen}
+setFlag = {setIsOpen}
+/>
     </div>
   )
 }
